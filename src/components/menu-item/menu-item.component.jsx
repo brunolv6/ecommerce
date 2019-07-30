@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './contentItem.style.scss'
+import './menu-item.style.scss'
 
-export const ContentItem = ({title, imageUrl, size}) => {
+export const MenuItem = ({title, imageUrl, size}) => {
     return(
         <div className={`${size} menu-item`}>
             <div

@@ -1,6 +1,6 @@
 import React from 'react';
 //por ser classe Homepage, NÃO deve tem que ter { ... }
-import Homepage from "./pages/homepages/homepage.pages.jsx"
+import Homepage from "./pages/homepage/homepage.component.jsx"
 
 import './App.scss';
 

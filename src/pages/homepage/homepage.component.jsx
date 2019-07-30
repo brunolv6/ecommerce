@@ -1,6 +1,6 @@
 import React from 'react';
 //por ser classe DirectoryMenu, NÃO tem que ter { ... }
-import DirectoryMenu from "../../components/directoryMenu/directoryMenu.component"
+import Directory from "../../components/directory/directory.component"
 
 import './homepage.style.scss';
 
@@ -9,7 +9,7 @@ class Homepage extends React.Component{
     render(){
         return(
             <div className="homepage">
-                <DirectoryMenu/>
+                <Directory/>
             </div>
         );
     }
