@@ -63,3 +63,13 @@
     }
   }
 }
+
+//ajustar responsividade
+@media screen and (max-width: 770px) {
+  .menu-item{
+    min-width: 200px;
+    &.large{
+      height: 200px;
+    }
+  }
+}
