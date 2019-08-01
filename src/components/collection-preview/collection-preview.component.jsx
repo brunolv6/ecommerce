@@ -6,7 +6,7 @@ import './collection-preview.style.scss';
 const CollectionPreview = ({ collection }) => {
     return( 
         <div className='collection-preview'>
-            <h1 clasName='title'>{collection.title}</h1>
+            <h1 className='title'>{collection.title}</h1>
             <div className='preview'>
                 {
                     collection.items.map( ({id, ...outros}) => (

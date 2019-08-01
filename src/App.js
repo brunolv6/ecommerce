@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 
 //por ser classe Homepage, NÃO deve tem que ter { ... }
 import Homepage from "./pages/homepage/homepage.component.jsx"
@@ -10,6 +10,7 @@ import './App.scss';
 function App() {
   return (
     <div>
+      <Link to='/'>Voltar</Link>
       <Switch>
         <Route exact path='/' component={Homepage}/>
         <Route exact path='/shop' component={ShopPage}/>
