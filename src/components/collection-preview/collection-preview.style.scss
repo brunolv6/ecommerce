@@ -1,6 +1,11 @@
 .collection-preview{
     display: flex;
     flex-direction: column;
+    padding-top: 20px;
+
+    &:first-child{
+        padding-top: 0px
+    }
 
     .title{
         font-size: 22px;
