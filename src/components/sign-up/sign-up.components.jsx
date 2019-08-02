@@ -1,12 +1,13 @@
 import React from 'react';
 import CustomInput from '../custom-input/custom-input.component'
 
-import './sign-in.style.scss';
+import './sign-up.style.scss';
 
-class SignIn extends React.Component {
+class SignUp extends React.Component {
     constructor(){
         super();
         this.state = {
+            name: '',
             email: '',
             password: ''
         }
@@ -29,9 +30,15 @@ class SignIn extends React.Component {
     render(){   
         return (
             <div className='signin'>
-                <h2>If you already have an account</h2>
-                <span>Sign In with your email and password</span>
+                <h2>If you do not have an account</h2>
+                <span>Sign Up below</span>
                 <form className='form' onSubmit={this.onSubmit}>
+                    <CustomInput 
+                        type='text'
+                        name='name'
+                        value={this.state.name}
+                        handleChange={this.handleChange}
+                    />
                     <CustomInput 
                         type='email'
                         name='email'
@@ -51,4 +58,4 @@ class SignIn extends React.Component {
     }
 };
 
-export default SignIn;
+export default SignUp;

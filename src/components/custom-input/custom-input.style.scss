@@ -1,0 +1,61 @@
+$sub-color: grey;
+$main-color: black;
+
+@mixin shrinkLabel {
+  top: -14px;
+  font-size: 12px;
+  color: $main-color;
+}
+
+.group {
+  //garante que fique no local destinado  
+  position: relative;
+  margin: 45px 0;
+
+  .form-input {
+    background: none;
+    background-color: white;
+    color: $sub-color;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none; 
+    border-bottom: 1px solid $sub-color;
+
+    &:focus {
+        //não aparece a linha azul quando selecionado
+        outline: none;
+    }
+
+    &:focus ~ .form-input-label {
+        //chama função quando é focado
+        //e modifica a tag que possui a className form-input-label
+        @include shrinkLabel();
+    }
+
+  }
+
+  input[type='password'] {
+      //espaçamento das letras modificado para senhas
+    letter-spacing: 0.3em;
+  }
+
+  .form-input-label {
+    color: $sub-color;
+    font-size: 16px;
+    font-weight: normal;
+    //permite musar sua colocação e manter onde desejar
+    position: absolute;
+    /* fixa a mudanca após focus */
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 300ms ease all;
+
+    &.shrink {
+      //este atributo no component é disparaado quando algo esta escrito
+      @include shrinkLabel();
+    }
+  }
+}
