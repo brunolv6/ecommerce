@@ -2,11 +2,14 @@ import React from 'react';
 
 import './custom-button.style.scss';
 
-const CustomButton = ({value, cor}) => {
-    return (
-        <button className='button' type='submit'>{value}</button>
-    );
-};
+const CustomButton = ({ children, ...otherProps }) => (
+    <button
+      className='button'
+      {...otherProps}
+    >
+      {children}
+    </button>
+  );
 
 
 export default CustomButton;

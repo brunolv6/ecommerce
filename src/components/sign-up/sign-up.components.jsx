@@ -54,7 +54,9 @@ class SignUp extends React.Component {
                     />
                     <CustomButton
                         value='Sign Up'
-                    />
+                    >
+                        Sign Up
+                    </CustomButton>
                 </form>
             </div>
         );
