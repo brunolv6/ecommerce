@@ -1,7 +1,21 @@
 .button{
     width: 40%;
     height: 40px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.829);
     color: white;
     border: none;
+    cursor: pointer;
+
+    &:hover{
+        background-color: black;
+        transform: scale(1.01);
+    }
+}
+
+.google-button{
+    background-color: #4285f4;
+    
+    &:hover{
+        background-color: #357ae8;
+    }
 }
