@@ -21,7 +21,8 @@ class App extends React.Component{
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    //recebi este método da biblioteca auth
+    //recebe este método da biblioteca auth 
+    //e o firestore cuida de atualizar o estado de login
     this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
       this.setState({currentUser: user })
       console.log(user);
@@ -29,7 +30,7 @@ class App extends React.Component{
   }
 
   componentWillUnmount() {
-    //desloga ao sair
+    //desloga a conexão com o firestore ao sair
     this.unsubscribeFromAuth();
   }
   
