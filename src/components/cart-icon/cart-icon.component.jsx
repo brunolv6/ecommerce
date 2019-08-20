@@ -14,7 +14,7 @@ class CartIcon extends React.Component{
             <div>
             <div className='cart-icon' onClick={this.props.setHidden}>
                 <ShoppingIcon className='shopping-icon'/>
-                <div className='items-number'>0</div>
+                <div className='items-number'>{this.props.itens}</div>
             </div>
             {
                 this.props.hidden?
@@ -27,7 +27,8 @@ class CartIcon extends React.Component{
 }
 
 const mapStateToProps = state => ({
-    hidden: state.cart.hidden
+    hidden: state.cart.hidden,
+    itens: state.cart.itens
 })
 
 const mapDispatchToProps = dispatch => ({
