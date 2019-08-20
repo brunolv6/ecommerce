@@ -4,18 +4,18 @@ import CustomButton from '../custom-button/custom-button.component'
 
 import './collection-item.style.scss';
 
-const CollectionItem = ({name, imageUrl, price}) => {
+const CollectionItem = ({item}) => {
     return(
         <div className="collection-item">
             <div
                 className='background-image'
                 style={{
-                    backgroundImage: `url(${imageUrl})`
+                    backgroundImage: `url(${item.imageUrl})`
                 }}
             />
             <div className="data-item">
-                <div className="name">{name}</div>
-                <div className="price">${price}</div>
+                <div className="name">{item.name}</div>
+                <div className="price">${item.price}</div>
             </div>
             <div className='button-space'>
                 <CustomButton invert='invert'>Add to Cart</CustomButton>
