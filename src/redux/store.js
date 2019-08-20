@@ -1,4 +1,5 @@
 import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import logger from 'redux-logger';
 
 //contêm objeto com tosos os estados
@@ -9,7 +10,7 @@ import rootReducer from './root-reducer';
 const middlewares = [logger];
 
 //cria o objeto com o estado e com o interceptador de ações (middleware)
-const store = createStore(rootReducer, applyMiddleware(...middlewares));
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middlewares)));
 
 export default store;
 
