@@ -1,0 +1,28 @@
+.cart-icon{
+    display: flex;
+    justify-content: center;
+
+    .shopping-icon{
+ /*        stroke: black;
+        stroke-width: 4; */
+        height: 100%;
+        width: 20px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .items-number{
+        position: absolute;
+        margin-top: 3.8px;
+    }
+}
+
+.cart-dropdown{
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    height: 300px;
+    margin-top: 5px;
+    border: black 1px solid;
+
+}
