@@ -1,3 +1,6 @@
+//evitar erro de digitação
+import { UserActionTypes } from './user.types';
+
 //caso não haja nenhum estado anterior, assume este
 const INITIAL_STATE = {
     currentUser: ''
@@ -8,7 +11,7 @@ export const userReducer = (state = INITIAL_STATE, action) => {
     //aciona o tipo de mudança se houver
     switch (action.type) {
         //se este for o tipo de ação faz as devidas modificações no objeto
-        case 'SET_CURRENT_USER':
+        case UserActionTypes.SET_CURRENT_USER:
             return {
                 ...state,
                 currentUser: action.payload
