@@ -12,7 +12,7 @@ class CartDropdown extends React.Component{
             <div className="cart-dropdown">
                 {
                     this.props.itens.map(item => (
-                        <div key={item.key} className="item">
+                        <div key={item.id} className="item">
                             <img src={item.url} alt={item.name} className="item-image"/>
                             <div>{item.name}</div>
                             <div>1</div>
