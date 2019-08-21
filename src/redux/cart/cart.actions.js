@@ -4,6 +4,7 @@ export const setHidden = () => ({
     type: CartActionTypes.SET_HIDDEN
 })
 
-export const addItem = () => ({
+export const addItem = (item) => ({
     type: CartActionTypes.ADD_ITEM,
+    payload: item
 })

@@ -14,7 +14,7 @@ class CartIcon extends React.Component{
             <div>
             <div className='cart-icon' onClick={this.props.setHidden}>
                 <ShoppingIcon className='shopping-icon'/>
-                <div className='items-number'>{this.props.itens}</div>
+                <div className='items-number'>{this.props.itens.length}</div>
             </div>
             {
                 this.props.hidden?

@@ -25,7 +25,7 @@ class CollectionItem extends React.Component{
                 </div>
                 <div className='button-space'>
                     {/* Tentar entender porque precisa do !this.props! */}
-                    <CustomButton invert='invert' onClick={this.props.addItem}>Add to Cart</CustomButton>
+                    <CustomButton invert='invert' onClick={()=>this.props.addItem(item)}>Add to Cart</CustomButton>
                 </div>
             </div>
         );
@@ -34,7 +34,7 @@ class CollectionItem extends React.Component{
 
 //faco esta action e modifico estado do  objeto do reducer
 const mapDispatchToProps = dispatch => ({
-    addItem: () => dispatch(addItem())
+    addItem: (item) => dispatch(addItem(item))
 })
 
 export default connect(null, mapDispatchToProps)(CollectionItem);
