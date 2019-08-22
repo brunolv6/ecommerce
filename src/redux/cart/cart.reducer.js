@@ -5,6 +5,22 @@ const INITIAL_STATE = {
     itens: []
 }
 
+const addItemToCart = (itemList, newItem) => {
+    let itemAlreadyOnCart = itemList.find(cartItem => (
+        cartItem.id === newItem.id
+    ))
+
+    if(itemAlreadyOnCart){
+        return itemList.map(cartItem => (
+            cartItem === itemAlreadyOnCart
+            ? {...cartItem, quantity: cartItem.quantity+1}
+            : cartItem
+        ))
+    }else{
+        return [...itemList, {...newItem, quantity: 1}]
+    }   
+}
+
 export const cartReducer = (state = INITIAL_STATE, action) => {
     switch(action.type){
         case CartActionTypes.SET_HIDDEN:
@@ -15,7 +31,7 @@ export const cartReducer = (state = INITIAL_STATE, action) => {
         case CartActionTypes.ADD_ITEM:
             return{
                 ...state,
-                itens: [...state.itens, action.payload]
+                itens: addItemToCart(state.itens, action.payload)
             }
         default:
             return{
