@@ -1,0 +1,24 @@
+.checkout-page{
+    margin-top: 8vh;
+
+    .checkout-blocks{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;    
+        width: 100%;
+        font-weight: bold;
+        border-bottom: 1px solid gray;
+        padding-bottom: 2vh;
+        @media (max-width: 500px){
+            font-size: 0.8rem;
+        }
+
+        .checkout-data{
+            width: 21%;
+        }
+
+        .checkout-remove{
+            width: 8%;
+        }
+    }
+}

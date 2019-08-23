@@ -1,0 +1,29 @@
+.checkout-item{
+    margin: 8px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &:last-child{
+        padding-bottom: 6px;
+        border-bottom: 1px solid gray;
+    }
+
+    .checkout-image-item{
+        width: 21%;
+        
+        img{
+            width: 90%;
+            height: 90%;
+        }
+    }
+
+    .checkout-data-item{
+        width: 21%;
+    }   
+
+    .checkout-remove-item{
+        width: 8%
+    }
+}
