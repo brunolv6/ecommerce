@@ -19,6 +19,10 @@
     align-items: center;
     overflow: hidden;
 
+    .cart-empty{
+        margin-top: 100px;
+    }
+
     .cart-items{
         height: 220px;
         overflow-y: scroll;

@@ -2,6 +2,8 @@ import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import logger from 'redux-logger';
 
+import { persistStore } from 'redux-persist';
+
 //contêm objeto com tosos os estados
 import rootReducer from './root-reducer';
 
@@ -10,7 +12,11 @@ import rootReducer from './root-reducer';
 const middlewares = [logger];
 
 //cria o objeto com o estado e com o interceptador de ações (middleware)
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middlewares)));
+//tive que importar assim, por default, não deu certo
+export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middlewares)));
 
-export default store;
+//qual a store que quero que persista
+export const persistor = persistStore(store);
+
+export default { store, persistStore };
 
