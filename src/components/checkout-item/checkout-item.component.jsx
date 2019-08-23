@@ -10,12 +10,12 @@ const CheckoutItem = ({item, addItem, removeItem, deleteItem}) => (
         <div className='checkout-image-item'><img src={item.imageUrl} alt={item.name}/></div>
         <div className='checkout-data-item'>{item.name}</div>
         <div className='checkout-data-item'>
-            <span onClick={() => removeItem(item)}>&#10094;</span>
+            <span className="pointer" onClick={() => removeItem(item)}>&#10094;</span>
             <span className='checkout-item-quantity'>{item.quantity}</span>
-            <span onClick={() => addItem(item)}>&#10095;</span>
+            <span className="pointer" onClick={() => addItem(item)}>&#10095;</span>
         </div>
         <div className='checkout-data-item'>${item.price}</div>
-        <div className='checkout-remove-item' onClick={()=>deleteItem(item)}>&#10008;</div>
+        <div className='checkout-remove-item pointer' onClick={()=>deleteItem(item)}>&#10008;</div>
     </div>
 )
 
