@@ -2,23 +2,10 @@ import React from 'react';
 
 import './category-page.style.scss';
 
-import { connect } from 'react-redux';
-
-import CollectionPreview from '../../components/collection-preview/collection-preview.component.jsx'
-
-const CategoryPage = ({collections}) => (
+const CategoryPage = () => (
     <div className='category-page'>
-        {
-            collections.collections.map(collection => (
-                    <CollectionPreview key={collection.id} collection={collection}/>
-                ))
-        }
+        <div>CategoryPageeeee!!!!</div>
     </div>
 )
 
-const mapStateToProps = (state) => ({
-    collections: state.collections
-})
-
-
-export default connect(mapStateToProps)(CategoryPage);
+export default CategoryPage;
