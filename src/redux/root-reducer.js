@@ -7,7 +7,7 @@ import { directoryReducer } from './directory/directory.reducer';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import { collectionsReducer } from './collections/collections.reducer';
+import { shopReducer } from './shop/shop.reducer';
 
 //configurar persist
 //Por ordem: a partir de onde do redux, onde quero guardar e o que do objeto do redux
@@ -24,7 +24,7 @@ const rootReducer = combineReducers({
     user: userReducer,
     cart: cartReducer,
     directory: directoryReducer,
-    collections: collectionsReducer
+    shop: shopReducer
 })
 
 //retorna rootReducer configurado para armazenar parte dele no localStorage

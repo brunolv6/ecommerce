@@ -1,2 +1,18 @@
 .category-page{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    align-items: center;
+
+    .category-title{
+        font-size: 22px;
+        font-style: bold;
+    }
+
+    .category-items{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
