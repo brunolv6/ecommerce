@@ -6,6 +6,7 @@ import { directoryReducer } from './directory/directory.reducer';
 
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+
 import { collectionsReducer } from './collections/collections.reducer';
 
 //configurar persist

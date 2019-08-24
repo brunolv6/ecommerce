@@ -15,8 +15,8 @@ const middlewares = [logger];
 //tive que importar assim, por default, não deu certo
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middlewares)));
 
-//qual a store que quero que persista
+//versão persistente da nossa store
 export const persistor = persistStore(store);
 
-export default { store, persistStore };
+export default { store, persistor };
 

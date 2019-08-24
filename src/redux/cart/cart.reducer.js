@@ -2,6 +2,8 @@ import { CartActionTypes } from './cart.type';
 import { addItemToCart } from './cart.utils'
 import { removeItemFromCart, deleteItemFromCart } from './cart.utils'
 
+import { REHYDRATE } from 'redux-persist/es/constants';
+
 const INITIAL_STATE = {
     hidden: false,
     itens: []
@@ -9,6 +11,11 @@ const INITIAL_STATE = {
 
 export const cartReducer = (state = INITIAL_STATE, action) => {
     switch(action.type){
+        case REHYDRATE:
+            if (action.payload && action.payload.cart) {
+                return { ...state, ...action.payload.cart };
+            }
+            return state;
         case CartActionTypes.SET_HIDDEN:
             return {
                 ...state,
